@@ -32,7 +32,11 @@
                         Day: <br><input type="number" name="day" min="1" max="31"><br>
                         Month: <br><input type="number" name="month" min="1" max="12"><br>
                         Year: <br><input type="number" name="year" min="1700" max="2050"><br>
-                        <input type="submit" value="Submit">
+                        <br>
+                        <input type="radio" name="gender" id="male">male
+                        <input type="radio" name="gender" id="female">female
+                        <br>
+                        <br><input type="submit" value="Submit"><br>
                     </form>
                     <script>
                     </script>
@@ -57,6 +61,7 @@
 
             var y = document.forms["myForm"]["year"].value;
 
+
             if (d == "") {
                 alert("date must be filled out");
                 return false;
@@ -67,9 +72,7 @@
                 alert("Year must be filled out");
                 return false;
             }
-            if (y%4 == 0 && y%100 == 0 && y%400 == 0{
-                
-            })
+
             var firstHalf = (y.slice(0, 2) / 4 - 2 * y.slice(0, 2) - 1);
 
             var secondMiddle = (5 * y.slice(-2) / 4);
@@ -78,18 +81,47 @@
 
             var dayofWeek = (parseInt(firstHalf) + parseInt(secondMiddle) + parseInt(lastHalf) + parseInt(d)) % 7;
 
-            
 
-            c=["sunday", "monday ","tuesday", "wednesday", "thursday","friday", "saturday"]
-            if(dayofWeek ==0){alert(c[5])}
-            if(dayofWeek ==1){alert(c[6])}
-            if(dayofWeek ==2){alert(c[0])}
-            if(dayofWeek ==3){alert(c[1])}
-            if(dayofWeek ==4){alert(c[2])}
-            if(dayofWeek ==5){alert(c[3])}
-            if(dayofWeek ==6){alert(c[4])}
 
-           
+            c = ["sunday", "monday ", "tuesday", "wednesday", "thursday", "friday", "saturday"]
+            if (dayofWeek == 0) {
+                alert(c[5])
+            };
+            if (dayofWeek == 1) {
+                alert(c[6])
+            };
+            if (dayofWeek == 2) {
+                alert(c[0])
+            };
+            if (dayofWeek == 3) {
+                alert(c[1])
+            };
+            if (dayofWeek == 4) {
+                alert(c[2])
+            };
+            if (dayofWeek == 5) {      
+                alert(c[3])
+            };
+            if (dayofWeek == 6) {
+                alert(c[4])
+            };
+            if(c = "sunday" && male){alert("kwasi")}return;
+            if(c = "monday" && male){alert("kwadwo")}return;
+            if(c = "tuesday" && male){alert("kwabena")}return;
+            if(c = "wednesday" && male){alert("kwaku")}return;
+            if(c = "thursday" && male){alert("Yaw")}return;
+            if(c = "friday" && male){alert("Kofi")}return;
+            if(c = "saturday" && male){alert("Kwame")}return;
+
+            if(c = "sunday" && female){alert("Akosua")}return;
+            if(c = "monday" && female){alert("Adwoa")}return;
+            if(c = "tuesday" && female){alert("Abenaa")}return;
+            if(c = "wednesday" && female){alert("Akua")}return;
+            if(c = "thursday" && female){alert("Yaa")}return;
+            if(c = "friday" && female){alert("Afua")}return;
+            if(c = "saturday" && female){alert("Ama")}return;
+
+
 
         }
     </script>
