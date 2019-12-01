@@ -92,6 +92,8 @@
 
             var dayofWeek = (parseInt(firstHalf) + parseInt(secondMiddle) + parseInt(lastHalf) + parseInt(d)) % 7;
 
+            
+
 
 //akan names array
             var c = ["kwasi", "kwadwo ", "kwabena", "kwaku", "yaw", "kofi", "kwame",]
@@ -99,8 +101,8 @@
 
 //male akan names//
             if (dayofWeek == 0 && male) {
-                alert(c[5])
-            }; 
+                alert(document.getElementById("male").innerHTML = c[5])
+            };
             if (dayofWeek == 1 && male) {
                 alert(c[6])
             };
@@ -123,7 +125,7 @@
 
             if (dayofWeek == 0 && female) {
                 alert(e[5])
-            };
+            };return
             if (dayofWeek == 1 && female) {
                 alert(e[6])
             };
