@@ -1,4 +1,4 @@
-# Akan calculator Website
+# Akan name calculator Website
 
 ## Author
 
