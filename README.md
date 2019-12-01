@@ -29,6 +29,7 @@ CSS3
 GIT (For version control)
 
 ## Support and contact details
+Contact me at timomaisha@gmail.com for more information.
 
 ## Known Bugs
 The formula used to be the basis of this program does not give consideration to the leap year
