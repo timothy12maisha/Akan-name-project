@@ -23,7 +23,7 @@
                         The Akan people of Ghana frequently name their children after the day of the week they were born
                         and
                         the order in which they were born.
-                    </strong>
+                    </strong>                                                           
                 </p>
             </div>
             <div class="card">
@@ -36,7 +36,9 @@
                         <input type="radio" name="gender" id="male">male
                         <input type="radio" name="gender" id="female">female
                         <br>
+                        
                         <br><input type="submit" value="Submit"><br>
+                        
                     </form>
                     <script>
                     </script>
@@ -54,6 +56,7 @@
         </footer>
     </div>
     <script>
+        //fill the form function//
         function validateForm() {
             var d = document.forms["myForm"]["day"].value;
 
@@ -61,7 +64,8 @@
 
             var y = document.forms["myForm"]["year"].value;
 
-
+//this is the reply if the one form is not filled out//
+            
             if (d == "") {
                 alert("date must be filled out");
                 return false;
@@ -71,7 +75,14 @@
             } else if (y == "") {
                 alert("Year must be filled out");
                 return false;
+            } else if (male == "" && female =="") {
+                alert("select either male or female");
+                return false;
             }
+
+            //forumla to apply to get akan names//
+//Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7//
+
 
             var firstHalf = (y.slice(0, 2) / 4 - 2 * y.slice(0, 2) - 1);
 
@@ -82,46 +93,55 @@
             var dayofWeek = (parseInt(firstHalf) + parseInt(secondMiddle) + parseInt(lastHalf) + parseInt(d)) % 7;
 
 
+//akan names array
+            var c = ["kwasi", "kwadwo ", "kwabena", "kwaku", "yaw", "kofi", "kwame",]
+            var e = ["akosua", "adwoa ", "abenaa", "akua", "yaa", "afua", "ama"]
 
-            c = ["sunday", "monday ", "tuesday", "wednesday", "thursday", "friday", "saturday"]
-            if (dayofWeek == 0) {
+//male akan names//
+            if (dayofWeek == 0 && male) {
                 alert(c[5])
-            };
-            if (dayofWeek == 1) {
+            }; 
+            if (dayofWeek == 1 && male) {
                 alert(c[6])
             };
-            if (dayofWeek == 2) {
+            if (dayofWeek == 2 && male) {
                 alert(c[0])
             };
-            if (dayofWeek == 3) {
+            if (dayofWeek == 3 && male) {
                 alert(c[1])
             };
-            if (dayofWeek == 4) {
+            if (dayofWeek == 4 && male) {
                 alert(c[2])
             };
-            if (dayofWeek == 5) {      
+            if (dayofWeek == 5 && male) {      
                 alert(c[3])
-            };
-            if (dayofWeek == 6) {
+            }
+            if (dayofWeek == 6 && male) {
                 alert(c[4])
             };
-            if(c = "sunday" && male){alert("kwasi")}return;
-            if(c = "monday" && male){alert("kwadwo")}return;
-            if(c = "tuesday" && male){alert("kwabena")}return;
-            if(c = "wednesday" && male){alert("kwaku")}return;
-            if(c = "thursday" && male){alert("Yaw")}return;
-            if(c = "friday" && male){alert("Kofi")}return;
-            if(c = "saturday" && male){alert("Kwame")}return;
+// //female akan names//
 
-            if(c = "sunday" && female){alert("Akosua")}return;
-            if(c = "monday" && female){alert("Adwoa")}return;
-            if(c = "tuesday" && female){alert("Abenaa")}return;
-            if(c = "wednesday" && female){alert("Akua")}return;
-            if(c = "thursday" && female){alert("Yaa")}return;
-            if(c = "friday" && female){alert("Afua")}return;
-            if(c = "saturday" && female){alert("Ama")}return;
-
-
+            if (dayofWeek == 0 && female) {
+                alert(e[5])
+            };
+            if (dayofWeek == 1 && female) {
+                alert(e[6])
+            };
+            if (dayofWeek == 2 && female) {
+                alert(e[0])
+            };
+            if (dayofWeek == 3 && female) {
+                alert(e[1])
+            };
+            if (dayofWeek == 4 && female) {
+                alert(e[2])
+            };
+            if (dayofWeek == 5 && female) {      
+                alert(e[3])
+            };
+            if (dayofWeek == 6 && male) {
+                alert(e[4])
+            };
 
         }
     </script>
