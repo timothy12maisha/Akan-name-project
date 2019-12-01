@@ -19,7 +19,7 @@ use atom . or code . to open the clone repo on Atom or vs -code respectively
 
 ## Known tags
 
-My website is compatible mainly with desktop and not well responsive on phone and tab
+My website is compatible mainly with desktop and is well responsive on phone and tab due to bootstrap styling.
 
 ## Technologies Used
 
