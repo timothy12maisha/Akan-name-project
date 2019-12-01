@@ -6,7 +6,8 @@
 
 ## Description
 
-This is my portfolio website. It contains details about me, projects i have done and it also has links to my other websites which i have worked on over the years.
+This is my Akan name calculator that calculates the Akan name based on the day, month and year either a female or
+a male is born.
 
 ## Setup/Installation Requirements
 
@@ -27,6 +28,10 @@ CSS3
 GIT (For version control)
 
 ## Support and contact details
+
+## Known Bugs
+The formula used to be the basis of this program does not give consideration to the leap year
+therefore , it may not give accurate akan name on a leap year basis.
 
 ## License
 
