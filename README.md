@@ -1,4 +1,4 @@
-# Personal Portfolio Website
+# Akan calculator Website
 
 ## Author
 
