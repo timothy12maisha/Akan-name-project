@@ -23,7 +23,7 @@
                         The Akan people of Ghana frequently name their children after the day of the week they were born
                         and
                         the order in which they were born.
-                    </strong>                                                           
+                    </strong>
                 </p>
             </div>
             <div class="card">
@@ -36,9 +36,9 @@
                         <input type="radio" name="gender" value="male" id="male">male
                         <input type="radio" name="gender" value="female" id="female">female
                         <br>
-                        
+
                         <br><input type="submit" value="Submit"><br>
-                        
+
                     </form>
                     <script>
                     </script>
@@ -64,10 +64,14 @@
 
             var y = document.forms["myForm"]["year"].value;
 
-            var genderinput = document.forms["myForm"]["gender"].value; if(genderinput == ""){ alert("are you male or female"); return;};
+            var genderinput = document.forms["myForm"]["gender"].value;
+            if (genderinput == "") {
+                alert("are you male or female");
+                return;
+            };
 
-//this is the reply if the one form is not filled out//
-            
+            //this is the reply if the one form is not filled out//
+
             if (d == "") {
                 alert("date must be filled out");
                 return false;
@@ -77,10 +81,10 @@
             } else if (y == "") {
                 alert("Year must be filled out");
                 return false;
-            } 
+            }
 
             //forumla to apply to get akan names//
-//Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7//
+            //Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7//
 
 
             var firstHalf = (y.slice(0, 2) / 4 - 2 * y.slice(0, 2) - 1);
@@ -91,14 +95,14 @@
 
             var dayofWeek = (parseInt(firstHalf) + parseInt(secondMiddle) + parseInt(lastHalf) + parseInt(d)) % 7;
 
-            
 
 
-//akan names array
-            var c = ["kwasi", "kwadwo ", "kwabena", "kwaku", "yaw", "kofi", "kwame",]
+
+            //akan names array
+            var c = ["kwasi", "kwadwo ", "kwabena", "kwaku", "yaw", "kofi", "kwame", ]
             var e = ["akosua", "adwoa ", "abenaa", "akua", "yaa", "afua", "ama"]
 
-//male akan names//
+            //male akan names//
             if (dayofWeek == 0 && genderinput == "male") {
                 alert(c[0])
             };
@@ -114,17 +118,18 @@
             if (dayofWeek == 4 && genderinput == "male") {
                 alert(c[4])
             };
-            if (dayofWeek == 5 && genderinput == "male") {      
+            if (dayofWeek == 5 && genderinput == "male") {
                 alert(c[5])
             }
             if (dayofWeek == 6 && genderinput == "male") {
                 alert(c[6])
             };
-// //female akan names//
+            // //female akan names//
 
             if (dayofWeek == 0 && genderinput == "female") {
                 alert(e[0])
-            };return
+            };
+            return
             if (dayofWeek == 1 && genderinput == "female") {
                 alert(e[1])
             };
@@ -137,7 +142,7 @@
             if (dayofWeek == 4 && genderinput == "female") {
                 alert(e[4])
             };
-            if (dayofWeek == 5 && genderinput == "female") {      
+            if (dayofWeek == 5 && genderinput == "female") {
                 alert(e[5])
             };
             if (dayofWeek == 6 && genderinput == "female") {
