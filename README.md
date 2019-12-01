@@ -23,7 +23,8 @@ My website is compatible mainly with desktop and not well responsive on phone an
 
 ## Technologies Used
 
-HTML5 
+HTML5
+JAVASCRIPT 
 CSS3
 GIT (For version control)
 
