@@ -94,11 +94,9 @@
             var lastHalf = (26 * (m + 1) / 10);
 
             var dayofWeek = (parseInt(firstHalf) + parseInt(secondMiddle) + parseInt(lastHalf) + parseInt(d)) % 7;
+            
 
-
-
-
-            //akan names array
+            //akan names array c for males and e for females//
             var c = ["kwasi", "kwadwo ", "kwabena", "kwaku", "yaw", "kofi", "kwame", ]
             var e = ["akosua", "adwoa ", "abenaa", "akua", "yaa", "afua", "ama"]
 
@@ -129,7 +127,6 @@
             if (dayofWeek == 0 && genderinput == "female") {
                 alert(e[0])
             };
-            return
             if (dayofWeek == 1 && genderinput == "female") {
                 alert(e[1])
             };
